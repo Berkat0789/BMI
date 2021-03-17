@@ -16,6 +16,8 @@ class CalculateVC: UIViewController {
     @IBOutlet weak var buttonContainer: UIView!
     
     var bmi = 0.0
+    
+    var service = BMIService()
 
     @IBAction func heightSliderChanged(_ sender: UISlider) {
         // Format to a String to get 1 decimal place
@@ -34,9 +36,7 @@ class CalculateVC: UIViewController {
         let height = heightSlider.value
         let weight = weightSlider.value
         // BMI Formula - (weight in KG / height in m^2) 
-        bmi = Double(weight / pow(height, 2))
-        print(bmi)
-        
+        service.calculateBMI(height: height, weight: weight)
         performSegue(withIdentifier: "calculateToResult", sender: self)
     }
     
@@ -46,7 +46,8 @@ class CalculateVC: UIViewController {
         if segue.identifier == "calculateToResult" {
             // We can force cast the vc since we know for sure it will exist
             let resultVC = segue.destination as! ResultsVC
-            resultVC.result = String(format: "%.1f", bmi)
+            resultVC.result = String(format: "%.1f", service.bmi)
+            resultVC.suggestion = service.suggeston
         }
     }
     
