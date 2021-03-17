@@ -157,6 +157,7 @@
                         <outlet property="heightSlider" destination="mBJ-7w-KRh" id="56V-LO-ChK"/>
                         <outlet property="weightLabel" destination="Amd-4o-DHv" id="pFq-Lh-m9i"/>
                         <outlet property="weightSlider" destination="71L-vo-tac" id="TgX-ud-Jfd"/>
+                        <segue destination="Oqb-dL-j9g" kind="show" identifier="calculateToResult" id="saH-v0-qnQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,15 +169,74 @@
             <objects>
                 <viewController id="Oqb-dL-j9g" customClass="ResultsVC" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9r-zu-Kdg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xQ-Ag-lsJ">
+                                <rect key="frame" x="8" y="748" width="398" height="60"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.80392156859999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bKE-BM-1kf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="34"/>
+                                <state key="normal" title="ReCalculate">
+                                    <color key="titleColor" red="0.23921568630000001" green="0.64313725489999995" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udl-lf-Tbj"/>
+                                    <action selector="reCalculatePressed:" destination="Oqb-dL-j9g" eventType="touchUpInside" id="22E-6D-f4R"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plF-52-dWB">
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iId-4u-gre">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="57"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.80392156859999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iId-4u-gre" secondAttribute="bottom" id="9TU-FF-bud"/>
+                                    <constraint firstAttribute="height" constant="200" id="GEm-Rb-XSc"/>
+                                    <constraint firstAttribute="width" constant="200" id="KBm-NH-cPF"/>
+                                    <constraint firstItem="iId-4u-gre" firstAttribute="leading" secondItem="plF-52-dWB" secondAttribute="leading" id="YfQ-Re-1aD"/>
+                                    <constraint firstAttribute="trailing" secondItem="iId-4u-gre" secondAttribute="trailing" id="brH-cy-xgb"/>
+                                    <constraint firstItem="iId-4u-gre" firstAttribute="top" secondItem="plF-52-dWB" secondAttribute="top" id="kav-qg-tx4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lose Some weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZu-r1-EAy">
+                                <rect key="frame" x="107" y="571" width="200" height="31.5"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="g5T-yE-YSQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.64313725489999995" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="plF-52-dWB" firstAttribute="centerX" secondItem="s9r-zu-Kdg" secondAttribute="centerX" id="5Av-Ec-EzY"/>
+                            <constraint firstItem="nZu-r1-EAy" firstAttribute="leading" secondItem="iId-4u-gre" secondAttribute="leading" id="Cqq-IN-pJC"/>
+                            <constraint firstItem="4xQ-Ag-lsJ" firstAttribute="bottom" secondItem="g5T-yE-YSQ" secondAttribute="bottom" id="F63-ZA-Bbe"/>
+                            <constraint firstItem="plF-52-dWB" firstAttribute="centerY" secondItem="s9r-zu-Kdg" secondAttribute="centerY" id="K2i-Ar-Ws7"/>
+                            <constraint firstItem="nZu-r1-EAy" firstAttribute="trailing" secondItem="iId-4u-gre" secondAttribute="trailing" id="P5m-iP-OGn"/>
+                            <constraint firstItem="g5T-yE-YSQ" firstAttribute="trailing" secondItem="4xQ-Ag-lsJ" secondAttribute="trailing" constant="8" id="SfV-3N-oIf"/>
+                            <constraint firstItem="4xQ-Ag-lsJ" firstAttribute="leading" secondItem="g5T-yE-YSQ" secondAttribute="leading" constant="8" id="bIs-ny-Uje"/>
+                            <constraint firstItem="nZu-r1-EAy" firstAttribute="top" secondItem="plF-52-dWB" secondAttribute="bottom" constant="50" id="guJ-o8-Qfc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SJB-WA-XKI"/>
+                    <connections>
+                        <outlet property="resultContainer" destination="plF-52-dWB" id="H0B-6I-CKj"/>
+                        <outlet property="resultvalue" destination="iId-4u-gre" id="wcV-tO-ghJ"/>
+                        <outlet property="suggestionText" destination="nZu-r1-EAy" id="W8Z-jD-FDG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwF-vf-QUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="118"/>
+            <point key="canvasLocation" x="879.71014492753625" y="117.85714285714285"/>
         </scene>
     </scenes>
     <resources>

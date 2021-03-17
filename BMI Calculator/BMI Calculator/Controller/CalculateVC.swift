@@ -33,9 +33,21 @@ class CalculateVC: UIViewController {
     @IBAction func calculatePressed(_ sender: Any) {
         let height = heightSlider.value
         let weight = weightSlider.value
-        
+        // BMI Formula - (weight in KG / height in m^2) 
         bmi = Double(weight / pow(height, 2))
         print(bmi)
+        
+        performSegue(withIdentifier: "calculateToResult", sender: self)
+    }
+    
+    // Prepare for segue to pass the BMi result to the result Page
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Safety check to make sure identifier is correct
+        if segue.identifier == "calculateToResult" {
+            // We can force cast the vc since we know for sure it will exist
+            let resultVC = segue.destination as! ResultsVC
+            resultVC.result = String(format: "%.1f", bmi)
+        }
     }
     
     
