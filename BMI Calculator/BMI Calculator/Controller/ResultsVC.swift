@@ -18,6 +18,7 @@ class ResultsVC: UIViewController {
     
     var result: String?
     var suggestion: String?
+    var containerColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class ResultsVC: UIViewController {
         resultContainer.layer.cornerRadius = resultContainer.frame.height / 2
         resultvalue.text = result
         suggestionText.text = suggestion
+        resultContainer.backgroundColor = containerColor
     }
     
     @IBAction func reCalculatePressed(_ sender: Any) {

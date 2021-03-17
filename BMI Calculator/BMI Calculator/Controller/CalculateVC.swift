@@ -14,9 +14,7 @@ class CalculateVC: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var buttonContainer: UIView!
-    
-    var bmi = 0.0
-    
+        
     var service = BMIService()
 
     @IBAction func heightSliderChanged(_ sender: UISlider) {
@@ -46,8 +44,9 @@ class CalculateVC: UIViewController {
         if segue.identifier == "calculateToResult" {
             // We can force cast the vc since we know for sure it will exist
             let resultVC = segue.destination as! ResultsVC
-            resultVC.result = String(format: "%.1f", service.bmi)
-            resultVC.suggestion = service.suggeston
+            resultVC.result = service.BMIStringValue
+            resultVC.containerColor = service.bmi?.color
+            resultVC.suggestion = service.SuggestionText
         }
     }
     
