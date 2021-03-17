@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CalculateVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculateVC" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbx-on-MhF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Height and Weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKp-4J-T5b">
+                                        <rect key="frame" x="16" y="292" width="382" height="100"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.64313725489999995" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Hx7-m1-ANj"/>
+                                    <constraint firstItem="WKp-4J-T5b" firstAttribute="leading" secondItem="Bbx-on-MhF" secondAttribute="leading" constant="16" id="mnb-aZ-wB2"/>
+                                    <constraint firstAttribute="bottom" secondItem="WKp-4J-T5b" secondAttribute="bottom" constant="8" id="tiV-nX-GRk"/>
+                                    <constraint firstAttribute="trailing" secondItem="WKp-4J-T5b" secondAttribute="trailing" constant="16" id="wp1-7N-9zH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJS-hY-dPJ">
+                                <rect key="frame" x="0.0" y="400" width="414" height="496"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-Cl-k6S">
+                                        <rect key="frame" x="5" y="18" width="404" height="164"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-mM-NZZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="69.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="MSr-wh-SAE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="31.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWP-Ps-OVU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="31.5"/>
+                                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.5m" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAB-lj-XiH">
+                                                                <rect key="frame" x="302" y="0.0" width="102" height="31.5"/>
+                                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="mBJ-7w-KRh">
+                                                        <rect key="frame" x="-2" y="39.5" width="408" height="31"/>
+                                                        <color key="minimumTrackTintColor" red="0.23921568630000001" green="0.64313725489999995" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="thumbTintColor" red="0.96470588239999999" green="0.80392156859999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bfA-MI-uxf"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9sJ-iB-Y3o">
+                                                <rect key="frame" x="0.0" y="92.5" width="404" height="71.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="QTh-QW-7gp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="31.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weight" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6D-Oq-c3g">
+                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="31.5"/>
+                                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40Kg" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-4o-DHv">
+                                                                <rect key="frame" x="302" y="0.0" width="102" height="31.5"/>
+                                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="10" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="71L-vo-tac">
+                                                        <rect key="frame" x="-2" y="41.5" width="408" height="31"/>
+                                                        <color key="minimumTrackTintColor" red="0.23921568630000001" green="0.64313725489999995" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="thumbTintColor" red="0.96470588239999999" green="0.80392156859999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="weightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lea-Ax-Bbj"/>
+                                                        </connections>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hct-0c-tyj">
+                                        <rect key="frame" x="8" y="394" width="398" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rei-Vn-JA7">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="60"/>
+                                                <color key="backgroundColor" red="0.23921568630000001" green="0.64313725489999995" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="34"/>
+                                                <state key="normal" title="Calculate">
+                                                    <color key="titleColor" red="0.96470588239999999" green="0.80392156859999997" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S66-Nl-pYN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Rei-Vn-JA7" secondAttribute="bottom" id="Mhc-60-N2I"/>
+                                            <constraint firstItem="Rei-Vn-JA7" firstAttribute="top" secondItem="hct-0c-tyj" secondAttribute="top" id="ao1-mT-sGi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rei-Vn-JA7" secondAttribute="trailing" id="gTC-iT-bDZ"/>
+                                            <constraint firstAttribute="height" constant="60" id="vE4-Yv-J0g"/>
+                                            <constraint firstItem="Rei-Vn-JA7" firstAttribute="leading" secondItem="hct-0c-tyj" secondAttribute="leading" id="wXD-tf-ar2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Zds-Cl-k6S" firstAttribute="top" secondItem="bJS-hY-dPJ" secondAttribute="top" constant="18" id="6Mn-od-u2A"/>
+                                    <constraint firstAttribute="bottom" secondItem="hct-0c-tyj" secondAttribute="bottom" constant="42" id="PpF-jV-M7L"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zds-Cl-k6S" secondAttribute="trailing" constant="5" id="QjM-lK-DCo"/>
+                                    <constraint firstItem="hct-0c-tyj" firstAttribute="leading" secondItem="bJS-hY-dPJ" secondAttribute="leading" constant="8" id="THu-2V-q9R"/>
+                                    <constraint firstItem="Zds-Cl-k6S" firstAttribute="leading" secondItem="bJS-hY-dPJ" secondAttribute="leading" constant="5" id="cDe-KX-rp4"/>
+                                    <constraint firstAttribute="trailing" secondItem="hct-0c-tyj" secondAttribute="trailing" constant="8" id="d8C-n4-J5d"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.051992215219999999" green="0.2398941517" blue="0.26065564159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bbx-on-MhF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4zo-pj-0gJ"/>
+                            <constraint firstItem="bJS-hY-dPJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9OR-Sh-lY6"/>
+                            <constraint firstItem="bJS-hY-dPJ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="eEV-PU-Fri"/>
+                            <constraint firstItem="Bbx-on-MhF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fZs-my-0wZ"/>
+                            <constraint firstItem="Bbx-on-MhF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i9Y-85-1fT"/>
+                            <constraint firstItem="bJS-hY-dPJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rDJ-C8-pow"/>
+                            <constraint firstItem="bJS-hY-dPJ" firstAttribute="top" secondItem="Bbx-on-MhF" secondAttribute="bottom" id="wa2-Rp-eNE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonContainer" destination="hct-0c-tyj" id="p03-Sk-95B"/>
+                        <outlet property="heightLabel" destination="NAB-lj-XiH" id="qSF-fu-MFV"/>
+                        <outlet property="heightSlider" destination="mBJ-7w-KRh" id="56V-LO-ChK"/>
+                        <outlet property="weightLabel" destination="Amd-4o-DHv" id="pFq-Lh-m9i"/>
+                        <outlet property="weightSlider" destination="71L-vo-tac" id="TgX-ud-Jfd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="123.88392857142857"/>
+        </scene>
+        <!--ResultsVC-->
+        <scene sceneID="MFC-iT-OgL">
+            <objects>
+                <viewController id="Oqb-dL-j9g" customClass="ResultsVC" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s9r-zu-Kdg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g5T-yE-YSQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwF-vf-QUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
